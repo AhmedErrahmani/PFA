@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>codeContest</title>
+<link rel="shortcut icon" href="{% static 'images/lg.png' %}" type="image/x-icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}"></head>
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#92A8D1;">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/lg.png' %}" alt="logo" width="70" height="70" class="d-inline-block align-text-top"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item ">
+              <a class="nav-link " aria-current="page" href="{% url 'index' %}">Acceuil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'challenges' %}">Challenges</a>
+              </li>
+        
+            <li class="nav-item"> 
+              <a class="nav-link" href="{% url 'contact' %}" >Contactez Nous</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'sinscrire' %}">S'inscrire </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'seconnecter' %}" tabindex="-1" >Se Connecter</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+     <!--/navbar-->
+     <!--carousel-->
+     
+     <div id="carouselExampleDark" class="carousel carousel-dark slide pt-5 mt-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{% static 'images/y.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-block ">
+              <h2>codeContest est une platforme de laboratoires à distance de programmation   </h2>
+              <h4><strong>Mettez-vous au défi </strong></h4"{% static 'images/y.jpg' %}">
+
+              <a id="btn" class="btn  btn-floating m-1" href="{% url 'challenges' %}" role="button"
+              >Commencer</i
+            ></a>           
+                  </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="{% static 'images/x.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-block ">
+                <h2> Rejoignez notre communauté de gens aussi passionnés que vous</h2>
+
+                <h4><strong>Rejoignez notre serveur Discord</strong></h4>
+                <a id="btn" class="btn  btn-floating m-1" href="https://discord.com/" role="button"
+                >Rejoindre</i
+              ></a>  
+            </div>
+          </div>
+         
+          
+        </div>
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div></div>
+      <!--/carousel-->
+<!--footer-->
+<div class="container mt-5 pt-5">
+	<footer class=" text-center text-white" style="background-color:#92A8D1;">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-dark  m-1" href="#!" role="button" 
+              ><img src="{% static 'images/fb.png' %}" height="30px"><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+              ><img src="{% static 'images/twitter.png' %}"height="30px"><i class="fab fa-twitter"></i
+            ></a>
+      
+      
+            <!-- Instagram -->
+            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+              ><img src="{% static 'images/insta.png' %}" height="30px"><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+              ><img src="{% static 'images/LinkedIn.png' %}" height="30px"><i class="fab fa-linkedin-in"></i
+            ></a>
+      
+            <!-- Github -->
+            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+              ><img src="{% static 'images/github.png' %}" height="32px"><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+      
+          <!-- Section: Form -->
+          <section class="">
+            <form action="">
+              <!--Grid row-->
+              <div class="row d-flex justify-content-center">
+                <!--Grid column-->
+                <div class="col-auto">
+                  <p class="pt-2 text-dark" >
+                    Inscrivez vous à notre newsletter
+                  </p>
+                </div>
+                <!--Grid column-->
+      
+                <!--Grid column-->
+                <div class="col-md-5 col-12">
+                  <!-- Email input -->
+                  <div class="form-outline form-white mb-4">
+                    <input type="email" id="form5Example2" class="form-control" placeholder="Email"  />
+                  </div>
+                </div>
+                <!--Grid column-->
+      
+                <!--Grid column-->
+                <div class="col-auto">
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-outline-dark mb-4">
+                    S'inscrire
+                  </button>
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </form>
+          </section>
+      
+        </div>
+      
+      </footer>
+		<!--/footer-->
+</div>
+
+<script src="{% static 'js/jquery.min.js' %}" type="text/javascript" charset="utf-8"></script>
+<script src="{% static 'js/app.js' %}" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+</html>
