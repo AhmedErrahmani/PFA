@@ -5,10 +5,10 @@ from django import forms
 
 from .models import Client
 
-class ClientForm(ModelForm):
-   class Meta:
-       model = Client
-       fields = '__all__'
+#class ClientForm(ModelForm):
+   #class Meta:
+      # model = Client
+       #fields = '__all__'
 
 class CreateClientForm(UserCreationForm):
     class Meta:

@@ -13,7 +13,7 @@
     <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#92A8D1;">
       <div class="container">
-        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/lg.png' %}" alt="logo" width="70" height="70" class="d-inline-block align-text-top"></a>
+        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="logo" width="200" height="70" class="d-inline-form align-text-top"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,13 +29,24 @@
             <li class="nav-item"> 
               <a class="nav-link" href="{% url 'contact' %}" >Contactez Nous</a>
             </li>
-            
-            <li class="nav-item">
+            <li class="nav-item nonconnected">
               <a class="nav-link" href="{% url 'sinscrire' %}">S'inscrire </a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item nonconnected">
               <a class="nav-link" href="{% url 'seconnecter' %}" tabindex="-1" >Se Connecter</a>
+            </li>
+            <li class="nav-item " >
+              <li id="drop" class="nav-item connected dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="{% url 'profile' %}" role="button" >Plus</a>
+                  <ul class="dropdown-menu" id="drop">
+                    <li><a class="dropdown-item" href="{% url 'profile' %}">Mon profile</a></li>
+                    <li><a class="dropdown-item" href="{% url 'meschallenges' %}">Mes challenges</a></li>
+
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Deconnexion</a></li>
+                  </ul>
+                </li>
             </li>
           </ul>
         </div>
@@ -52,25 +63,25 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="{% static 'images/y.jpg' %}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-block ">
+            <img src="{% static 'images/y.jpg' %}" class="d-form w-100" alt="...">
+            <div class="carousel-caption d-form ">
               <h2>codeContest est une platforme de laboratoires à distance de programmation   </h2>
-              <h4><strong>Mettez-vous au défi </strong></h4"{% static 'images/y.jpg' %}">
+              <h4><strong>Mettez-vous au défi </strong></h4>
 
               <a id="btn" class="btn  btn-floating m-1" href="{% url 'challenges' %}" role="button"
-              >Commencer</i
-            ></a>           
+              >Commencer
+            </a>           
                   </div>
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <img src="{% static 'images/x.jpg' %}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-block ">
+            <img src="{% static 'images/x.jpg' %}" class="d-form w-100" alt="...">
+            <div class="carousel-caption d-form ">
                 <h2> Rejoignez notre communauté de gens aussi passionnés que vous</h2>
 
                 <h4><strong>Rejoignez notre serveur Discord</strong></h4>
                 <a id="btn" class="btn  btn-floating m-1" href="https://discord.com/" role="button"
-                >Rejoindre</i
-              ></a>  
+                >Rejoindre
+              </a>  
             </div>
           </div>
          
@@ -102,7 +113,7 @@
       
             <!-- Twitter -->
             <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
-              ><img src="{% static 'images/twitter.png' %}"height="30px"><i class="fab fa-twitter"></i
+              ><img src="{% static 'images/twitter.png' %}" height="30px"><i class="fab fa-twitter"></i
             ></a>
       
       

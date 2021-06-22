@@ -2,85 +2,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenges</title>
-    <link rel="shortcut icon" href="{% static 'images/lg.png' %}" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>codeContest</title>
+<link rel="shortcut icon" href="{% static 'images/lg.png' %}" type="image/x-icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
-  <body>
+<body>
     <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#92A8D1;">
-        <div class="container">
-          <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="logo" width="200" height="70" class="d-inline-block align-text-top"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item ">
-                <a class="nav-link " aria-current="page" href="{% url 'index' %}">Acceuil</a>
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="logo" width="200" height="70" class="d-inline-form align-text-top"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item ">
+              <a class="nav-link " aria-current="page" href="{% url 'index' %}">Acceuil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'challenges' %}">Challenges</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'challenges' %}">Challenges</a>
+        
+            <li class="nav-item"> 
+              <a class="nav-link" href="{% url 'contact' %}" >Contactez Nous</a>
+            </li>
+
+            <li class="nav-item " >
+              <li id="drop" class="nav-item connected dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="{% url 'profile' %}" role="button" >Plus</a>
+                  <ul class="dropdown-menu" id="drop">
+                    <li><a class="dropdown-item" href="{% url 'profile' %}">Mon profile</a></li>
+                    <li><a class="dropdown-item" href="{% url 'meschallenges' %}">Mes challenges</a></li>
+
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Deconnexion</a></li>
+                  </ul>
                 </li>
-          
-              <li class="nav-item"> 
-                <a class="nav-link" href="{% url 'contact' %}" >Contactez Nous</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'sinscrire' %}">S'inscrire </a>
-              </li>
-  
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'seconnecter' %}" tabindex="-1" >Se Connecter</a>
-              </li>
-            </ul>
-          </div>
+            </li>
+          </ul>
         </div>
-      </nav>
-       <!--/navbar-->
-     <div class="signup-form pt-5" id="tableau">
+      </div>
+    </nav>
+     <!--/navbar-->
+     <div class="form pt-5" id="tableau">
         <form >
             <h2>
-                Concours en cours ou à venir</h2>
+                Challenges terminées</h2>
             <table class="table  table-striped table-hover">
                 <thead>
                     <tr>
                       <th scope="col">Nom</th>
                       <th scope="col">Auteur</th>
-                      <th scope="col">Date de début</th>
-                      <th scope="col">date de fin</th>
+                      <th scope="col">Temps</th>
                       <th scope="col">Niveau</th>
-                      <th scope="col"></th>
+                      <th scope="col">Classement</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {% for contest in contest %}
                     <tr>
-                      <th scope="row">{{contest.name}}</th>
-                      <td>{{contest.auteur}}</td>
-                      <td>{{contest.date}}</td>
-                      <td>{{contest.dure}}</td>
-                      <td>{{contest.niveau}}</td>
-                      <td><a href="{% url 'ls' %}" class="hint-text text-dark ">S'inscrire</a></td>
+                      <th scope="row">x</th>
+                      <td>x</td>
+                      <td>x</td>
+                      <td>x</td>
+                      <td>x</td>
                     </tr>
-                    {% endfor %}
-                    
                   </tbody>
               </table>
         </form>
     </div>
-
-    
-</div>
-    <!-- Footer -->
-    <div class="container pt-4" id="">
-      <footer class=" text-center text-white" style="background-color:#92A8D1;">
+    <!--footer-->
+    <div class="container mt-5 pt-5">
+	<footer class=" text-center text-white" style="background-color:#92A8D1;">
         <!-- Grid container -->
         <div class="container p-4">
           <!-- Section: Social media -->
@@ -123,7 +119,7 @@
                   <p class="pt-2 text-dark" >
                     Inscrivez vous à notre newsletter
                   </p>
-                </div>
+                </div>seconnecter
                 <!--Grid column-->
       
                 <!--Grid column-->
@@ -151,11 +147,11 @@
         </div>
       
       </footer>
-    <!--/footer-->
+		
+    </div>
+<!--/footer-->
     <script src="{% static 'js/jquery.min.js' %}" type="text/javascript" charset="utf-8"></script>
     <script src="{% static 'js/app.js' %}" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    </div>
-    
 </body>
 </html>
